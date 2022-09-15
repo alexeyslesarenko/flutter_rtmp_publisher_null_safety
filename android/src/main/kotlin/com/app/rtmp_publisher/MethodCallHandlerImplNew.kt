@@ -29,7 +29,7 @@ class MethodCallHandlerImplNew(
     private val imageStreamChannel: EventChannel
     private var currentOrientation = OrientationEventListener.ORIENTATION_UNKNOWN
     private var dartMessenger: DartMessenger? = null
-    private var nativeViewFactory: NativeViewFactory? = null
+    private val nativeViewFactory: NativeViewFactory
     private val handler = Handler()
 
     private val textureId = 0L
