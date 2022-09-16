@@ -24,7 +24,6 @@ import com.pedro.encoder.input.video.CameraHelper
 import com.pedro.encoder.video.FormatVideoEncoder
 import com.pedro.rtplibrary.rtmp.RtmpCamera1
 import com.pedro.rtplibrary.rtmp.RtmpCamera2
-import com.pedro.rtplibrary.base.Camera2Base
 import com.pedro.rtplibrary.util.BitrateAdapter
 import com.pedro.rtplibrary.view.LightOpenGlView
 import com.pedro.rtplibrary.view.OpenGlView
@@ -72,7 +71,7 @@ class Camera(
 
 //    private val glView: FlutterGLSurfaceView
     private val glView: LightOpenGlView
-    private val rtmpCamera: Camera2Base
+    private val rtmpCamera: RtmpCamera2
 
     init {
         checkNotNull(activity) { "No activity available!" }
