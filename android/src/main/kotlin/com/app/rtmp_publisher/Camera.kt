@@ -632,7 +632,7 @@ class Camera(
 //                createCaptureSession(
 //                        CameraDevice.TEMPLATE_RECORD,
 //                        Runnable { rtmpCamera!!.startStream(url) }
-                )
+//                )
             } else {
                 rtmpCamera!!.startStream(url)
             }
