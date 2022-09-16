@@ -359,7 +359,7 @@ class CameraController extends ValueNotifier<CameraValue> {
     try {
       _creatingCompleter = Completer<void>();
       final Map<String, dynamic> reply =
-          await (_channel.invokeMapMethod<String, dynamic>(
+          (await (_channel.invokeMapMethod<String, dynamic>(
         'initialize',
         <String, dynamic>{
           'cameraName': description.name,
@@ -367,9 +367,9 @@ class CameraController extends ValueNotifier<CameraValue> {
           'streamingPreset':
               serializeResolutionPreset(streamingPreset ?? resolutionPreset),
           'enableAudio': enableAudio,
-          'enableAndroidOpenGL': androidUseOpenGL ?? false
+          'enableAndroidOpenGL': androidUseOpenGL,
         },
-      ) as FutureOr<Map<String, dynamic>>);
+      )))!;
       _textureId = reply['textureId'];
       value = value.copyWith(
         isInitialized: true,
